@@ -1,0 +1,15 @@
+---
+
+- name: 'task include install'
+  include: install.yml
+  when: not (diffutils_state|match('false|no|remove|quiesce|inactive'))
+  tags:
+    - main
+    - diffutils
+
+- name: 'task include remove'
+  include: remove.yml
+  when: (diffutils_state|match('false|no|remove'))
+  tags:
+    - main
+    - diffutils
