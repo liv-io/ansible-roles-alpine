@@ -1,0 +1,31 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - remove
+    - main
+    - openbsd_netcat
+
+#-------------------------------------------------------------------------------
+# PACKAGING
+#-------------------------------------------------------------------------------
+
+- name: 'package remove openbsd-netcat'
+  package:
+    state: 'absent'
+    name: "{{package_name_openbsd_netcat}}"
+  tags:
+    - packaging
+    - remove
+    - main
+    - openbsd_netcat
