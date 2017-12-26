@@ -3,7 +3,7 @@ INFORMATION
 --------------------------------------------------------------------------------
 
 Name   : vim
-Type   : ansible role
+Type   : Ansible role
 
 Authors: liv community
 License: Simplified BSD License

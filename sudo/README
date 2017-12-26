@@ -3,7 +3,7 @@ INFORMATION
 --------------------------------------------------------------------------------
 
 Name   : sudo
-Type   : ansible role
+Type   : Ansible role
 
 Authors: liv community
 License: Simplified BSD License
