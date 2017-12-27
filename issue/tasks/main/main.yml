@@ -1,0 +1,8 @@
+---
+
+- name: 'task include install'
+  include: install.yml
+  when: not (issue_state|match('false|no|disable|quiesce|inactive'))
+  tags:
+    - main
+    - issue
