@@ -67,7 +67,7 @@ ROLE
                  created. The custom Jinja2 file for an example configuration
                  called 'example' needs to be placed as follows:
                  'tmux/templates/example/tmux.conf.j2'
-    Implemented: 0.4
+    Implemented: 0.1
     Required   : False
     Value      : Arbitrary
     Type       : String
