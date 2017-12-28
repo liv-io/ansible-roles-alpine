@@ -1,0 +1,50 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - enable
+    - main
+    - openntpd
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'template create ntpd.conf'
+  template:
+    src: "{{file_src_ntpd_conf}}"
+    dest: "{{file_path_ntpd_conf}}"
+    mode: "{{file_mode_ntpd_conf}}"
+    owner: "{{file_owner_ntpd_conf}}"
+    group: "{{file_group_ntpd_conf}}"
+  notify: service restart openntpd
+  tags:
+    - files
+    - enable
+    - main
+    - openntpd
+
+#-------------------------------------------------------------------------------
+# SYSTEM
+#-------------------------------------------------------------------------------
+
+- name: 'service start ntpd'
+  service:
+    state: 'started'
+    enabled: 'yes'
+    name: "{{service_name_openntpd}}"
+  tags:
+    - system
+    - enable
+    - main
+    - openntpd

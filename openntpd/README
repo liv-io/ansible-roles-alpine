@@ -1,0 +1,191 @@
+--------------------------------------------------------------------------------
+INFORMATION
+--------------------------------------------------------------------------------
+
+Name   : openntpd
+Type   : Ansible role
+
+Authors: liv community
+License: Simplified BSD License
+
+--------------------------------------------------------------------------------
+DESCRIPTION
+--------------------------------------------------------------------------------
+
+The ntpd daemon implements the Simple Network Time Protocol version 4 as
+described in RFC 2030 and the Network Time Protocol version 3 as described in
+RFC 1305. It can synchronize the local clock to one or more remote NTP servers
+and act as NTP server itself, redistributing the local time.
+
+For more detailed information on the usage and available configuration options
+please consult the following sections.
+
+--------------------------------------------------------------------------------
+USAGE
+--------------------------------------------------------------------------------
+
+INSTALL
+  - hosts: all
+    roles:
+      - role: openntpd
+    vars:
+      openntpd_state: 'install'
+
+ENABLE
+  - hosts: all
+    roles:
+      - role: openntpd
+    vars:
+      openntpd_state: 'enable'
+      openntpd_server: [{server: {'ntp01.domain.tld', 'ntp02.domain.tld'},
+                         type: 'single', comment: 'Server: Single NTP servers'}]
+
+DISABLE
+  - hosts: all
+    roles:
+      - role: openntpd
+    vars:
+      openntpd_state: 'disable'
+      openntpd_server: [{server: {'ntp01.domain.tld', 'ntp02.domain.tld'},
+                         type: 'single', comment: 'Server: Single NTP servers'}]
+
+REMOVE
+  - hosts: all
+    roles:
+      - role: openntpd
+    vars:
+      openntpd_state: 'remove'
+
+INACTIVE
+  - hosts: all
+    roles:
+      - role: openntpd
+    vars:
+      openntpd_state: 'inactive'
+
+--------------------------------------------------------------------------------
+VARIABLES
+--------------------------------------------------------------------------------
+
+ROLE
+  openntpd_state
+    Description: Control the state of the role.
+    Implemented: 0.1
+    Required   : False
+    Value      : Predetermined
+    Type       : String
+    Default    : 'enable'
+    Options    :
+      Install : 'true' | 'yes' | 'install'
+      Enable  : 'start' | 'on' | 'enable'
+      Disable : 'stop' | 'off' | 'disable'
+      Remove  : 'false' | 'no' | 'remove'
+      Inactive: 'quiesce' | 'inactive'
+
+  openntpd_listen
+    Description: Define the 'openntpd_listen' option.
+    Implemented: 0.1
+    Required   : False
+    Value      : Arbitrary
+    Type       : Array/Hash
+    Default    : []
+    Options    :
+      Examples: [{config: {'*'}, comment: 'Listen: All interfaces'}] |
+                [{config: {'127.0.0.1', '::1'}, comment: 'Listen: Localhost'}] |
+                [{config: {'192.168.1.10'}, comment: 'Listen: Specific interface'}]
+      None    : []
+
+  openntpd_ntpd_conf_template
+    Description: Define the template source for 'ntpd.conf.j2'.
+                 Any value other than 'main' requires a Jinja2
+                 file to be created. The custom Jinja2 file for an example
+                 configuration called 'example' needs to be placed as follows:
+                 'openntpd/templates/example/ntpd.conf.j2'
+    Implemented: 0.1
+    Required   : False
+    Value      : Arbitrary
+    Type       : String
+    Default    : 'main'
+    Options    :
+      Examples: 'example' | 'environment' | 'hostname'
+
+  openntpd_server
+    Description: Define the 'openntpd_server' option.
+    Implemented: 0.1
+    Required   : False
+    Value      : Arbitrary
+    Type       : Array/Hash
+    Default    : [{server: {'ntp'}, type: 'single', weight: 1, comment: 'Server: ntp'}]
+    Options    :
+      Examples: [{server: {'ntp01.domain.tld'}, type: 'single', weight: 1, comment: 'Server: Single NTP servers'},
+                 {server: {'ntp02.domain.tld'}, type: 'single', weight: 2, comment: 'Server: Single NTP servers'}] |
+                [{server: {'ntp01.domain.tld', 'ntp02.domain.tld'}, type: 'single', comment: 'Server: Single NTP servers'}] |
+                [{server: {'pool01.ntp.domain.tld', 'pool02.ntp.domain.tld'}, type: 'random', comment: 'Server: Random NTP servers'}]
+      None    : []
+
+--------------------------------------------------------------------------------
+CONFLICTS
+--------------------------------------------------------------------------------
+
+ROLES
+  ntp
+
+--------------------------------------------------------------------------------
+DEPENDENCIES
+--------------------------------------------------------------------------------
+
+PACKAGES
+  openntpd
+    Version: >= 20080406
+    Name   :
+      Alpine Linux 3.6: 'openntpd'
+      Alpine Linux 3.7: 'openntpd'
+
+ROLES
+
+VARIABLES
+
+--------------------------------------------------------------------------------
+REQUIREMENTS
+--------------------------------------------------------------------------------
+
+CONTROL MACHINE
+  Ansible
+    Version: >= 2.0
+
+  Python
+    Version: >= 2.4
+
+  Python-Crypto
+    Version: >= 2.0
+
+  Python-Jinja2
+    Version: >= 2.0
+
+  Python-Paramiko
+    Version: >= 1.0
+
+  Python-YAML
+    Version: >= 3.0
+
+  sshpass
+    Version: >= 1.0
+
+MANAGED NODE
+  Python
+    Version: >= 2.4
+
+--------------------------------------------------------------------------------
+SUPPORT
+--------------------------------------------------------------------------------
+
+OPERATING SYSTEMS
+  Alpine Linux
+    Version: 3.6-*
+      Status: Testing
+    Version: 3.7-*
+      Status: Testing
+
+--------------------------------------------------------------------------------
+OTHER
+--------------------------------------------------------------------------------
