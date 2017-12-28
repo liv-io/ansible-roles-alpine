@@ -2,6 +2,6 @@
 
 - name: 'task include main'
   include: main/main.yml
-  when: ((ansible_distribution== 'Alpine') and (ansible_distribution_version|match("3\.6\.*|3\.7\.*")))
+  when: ((ansible_distribution == 'Alpine') and (ansible_distribution_version|match("3\.6\.*|3\.7\.*")))
   tags:
     - nano
