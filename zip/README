@@ -12,9 +12,9 @@ License: Simplified BSD License
 DESCRIPTION
 --------------------------------------------------------------------------------
 
-The zip package contains the popular GNU zip data compression program.
-Gzipped files have a .gz extension. Gzip should be installed on your system,
-because it is a very commonly used data compression program.
+Zip is a compression and file packaging utility. It is compatible with PKZIP
+2.04g (Phil Katz ZIP) for MSDOS systems. There is a companion to zip called
+unzip (of course) which you can also install from the ports/package system.
 
 For more detailed information on the usage and available configuration options
 please consult the following sections.
