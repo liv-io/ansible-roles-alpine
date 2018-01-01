@@ -27,8 +27,7 @@
     mode: "{{file_mode_hostname}}"
     owner: "{{file_owner_hostname}}"
     group: "{{file_group_hostname}}"
-  notify:
-    - 'command set hostname'
+  notify: 'command set hostname'
   tags:
     - files
     - install
