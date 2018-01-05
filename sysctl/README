@@ -30,13 +30,6 @@ INSTALL
     vars:
       sysctl_state: 'install'
 
-REMOVE
-  - hosts: all
-    roles:
-      - role: sysctl
-    vars:
-      sysctl_state: 'remove'
-
 INACTIVE
   - hosts: all
     roles:
@@ -47,7 +40,7 @@ INACTIVE
 CONFIG
   vars:
     sysctl_all:
-      - name: 'Network Hardening'
+      - name: 'network-hardening'
         order: '10'
         state: 'true'
         sysctl:
@@ -68,7 +61,7 @@ CONFIG
             comment: 'Smurf attack protection'
 
     sysctl_dependencies
-      - name: 'IP Forwarding'
+      - name: 'ip-forwarding'
         order: '10'
         state: 'true'
         sysctl:
@@ -80,7 +73,7 @@ CONFIG
             comment: 'IPv6 forwarding'
 
     sysctl_group:
-      - name: 'Kernel Security'
+      - name: 'kernel-security'
         order: '00'
         state: 'true'
         sysctl:
@@ -92,7 +85,7 @@ CONFIG
             comment: 'ASLR full randomization'
 
     sysctl_host:
-      - name: 'PIDs'
+      - name: 'pids'
         order: '10'
         state: 'false'
         sysctl:
@@ -114,7 +107,6 @@ ROLE
     Default    : 'install'
     Options    :
       Install : 'true' | 'yes' | 'install'
-      Remove  : 'false' | 'no' | 'remove'
       Inactive: 'quiesce' | 'inactive'
 
   sysctl_all
@@ -125,7 +117,7 @@ ROLE
     Type       : Array/Hash
     Default    : []
     Options    :
-      Examples: [{state: 'true', name: 'Network Hardening', order: '10',
+      Examples: [{state: 'true', name: 'network-hardening', order: '10',
                   sysctl: [{key: 'net.ipv4.tcp_syncookies', value: '1', comment: 'TCP SYN cookie protection'},
                            {key: 'net.ipv4.tcp_rfc1337', value: '1', comment: 'TCP time-wait assassination hazards'},
                            {key: 'net.ipv4.conf.all.rp_filter', value: '1', comment: 'Reverse path filtering'},
@@ -141,7 +133,7 @@ ROLE
     Type       : Array/Hash
     Default    : []
     Options    :
-      Examples: [{state: 'true', name: 'Network Hardening', order: '10',
+      Examples: [{state: 'true', name: 'network-hardening', order: '10',
                   sysctl: [{key: 'net.ipv4.tcp_syncookies', value: '1', comment: 'TCP SYN cookie protection'},
                            {key: 'net.ipv4.tcp_rfc1337', value: '1', comment: 'TCP time-wait assassination hazards'},
                            {key: 'net.ipv4.conf.all.rp_filter', value: '1', comment: 'Reverse path filtering'},
@@ -157,7 +149,7 @@ ROLE
     Type       : Array/Hash
     Default    : []
     Options    :
-      Examples: [{state: 'true', name: 'Network Hardening', order: '10',
+      Examples: [{state: 'true', name: 'network-hardening', order: '10',
                   sysctl: [{key: 'net.ipv4.tcp_syncookies', value: '1', comment: 'TCP SYN cookie protection'},
                            {key: 'net.ipv4.tcp_rfc1337', value: '1', comment: 'TCP time-wait assassination hazards'},
                            {key: 'net.ipv4.conf.all.rp_filter', value: '1', comment: 'Reverse path filtering'},
@@ -173,7 +165,7 @@ ROLE
     Type       : Array/Hash
     Default    : []
     Options    :
-      Examples: [{state: 'true', name: 'Network Hardening', order: '10',
+      Examples: [{state: 'true', name: 'network-hardening', order: '10',
                   sysctl: [{key: 'net.ipv4.tcp_syncookies', value: '1', comment: 'TCP SYN cookie protection'},
                            {key: 'net.ipv4.tcp_rfc1337', value: '1', comment: 'TCP time-wait assassination hazards'},
                            {key: 'net.ipv4.conf.all.rp_filter', value: '1', comment: 'Reverse path filtering'},
