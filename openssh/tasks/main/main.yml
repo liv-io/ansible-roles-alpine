@@ -20,3 +20,10 @@
   tags:
     - main
     - openssh
+
+- name: 'task include remove'
+  include: remove.yml
+  when: (openssh_state|match('false|no|remove'))
+  tags:
+    - main
+    - openssh
