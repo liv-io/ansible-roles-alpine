@@ -13,5 +13,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.1 (2018-01-07)
+I: Improve 'sudo' order and name separation character
+
 * Version 0.1.0 (2017-12-26)
 F: Initial release
