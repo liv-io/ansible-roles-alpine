@@ -1,0 +1,34 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - install
+    - main
+    - apk
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'template create repositories'
+  template:
+    src: "{{file_src_repositories}}"
+    dest: "{{file_path_repositories}}"
+    mode: "{{file_mode_repositories}}"
+    owner: "{{file_owner_repositories}}"
+    group: "{{file_group_repositories}}"
+  tags:
+    - files
+    - install
+    - main
+    - apk

@@ -1,0 +1,19 @@
+---
+
+apk_state: 'install'
+
+apk_all:
+  - {state: 'false', protocol: 'none', mirror: 'none', path: '/media/cdrom/apks', version: 'none', repository: 'none', comment: 'CD-ROM'}
+  - {state: 'true', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: "v{{ansible_distribution_version|truncate(3, True, '')}}", repository: 'main', comment: 'Stable Main Repository'}
+  - {state: 'false', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: "v{{ansible_distribution_version|truncate(3, True, '')}}", repository: 'community', comment: 'Stable Community Repository'}
+  - {state: 'false', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: 'edge', repository: 'main', comment: 'Edge Main Repository'}
+  - {state: 'false', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: 'edge', repository: 'community', comment: 'Edge Community Repository'}
+  - {state: 'false', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: 'edge', repository: 'testing', comment: 'Edge Testing Repository'}
+
+apk_dependencies: []
+
+apk_group: []
+
+apk_host: []
+
+apk_repositories_template: 'main'
