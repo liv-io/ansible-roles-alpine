@@ -1,0 +1,23 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+
+#-------------------------------------------------------------------------------
+# COMMANDS
+#-------------------------------------------------------------------------------
+
+- name: 'command purge apk cache'
+  command: "{{command_cmd_purge_apk_cache}}"
+
+- name: 'command update apk repository indexes'
+  command: "{{command_cmd_apk_repository_indexes}}"

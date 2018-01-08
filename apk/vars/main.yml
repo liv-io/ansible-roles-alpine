@@ -10,3 +10,13 @@ file_path_repositories: '/etc/apk/repositories'
 file_mode_repositories: '0644'
 file_owner_repositories: 'root'
 file_group_repositories: 'root'
+
+#-------------------------------------------------------------------------------
+# COMMANDS
+#-------------------------------------------------------------------------------
+
+# purge-apk-cache
+command_cmd_purge_apk_cache: 'rm -f /var/cache/apk/*.tar.gz'
+
+# update-apk-repository-indexes
+command_cmd_apk_repository_indexes: 'apk update'

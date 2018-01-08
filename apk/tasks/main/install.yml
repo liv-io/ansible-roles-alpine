@@ -27,8 +27,23 @@
     mode: "{{file_mode_repositories}}"
     owner: "{{file_owner_repositories}}"
     group: "{{file_group_repositories}}"
+  notify:
+    - 'command purge apk cache'
+    - 'command update apk repository indexes'
   tags:
     - files
+    - install
+    - main
+    - apk
+
+#-------------------------------------------------------------------------------
+# META
+#-------------------------------------------------------------------------------
+
+- name: 'meta flush handlers'
+  meta: 'flush_handlers'
+  tags:
+    - meta
     - install
     - main
     - apk
