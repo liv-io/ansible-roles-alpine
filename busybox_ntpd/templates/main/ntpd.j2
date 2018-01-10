@@ -1,0 +1,23 @@
+#-------------------------------------------------------------------------------
+#                             ANSIBLE MANAGED FILE
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# INFORMATION
+#-------------------------------------------------------------------------------
+#
+# Name   : ntpd
+# Type   : busybox_ntpd configuration file
+# Role   : busybox_ntpd
+#
+# Authors: liv community
+# License: Simplified BSD License
+#
+#-------------------------------------------------------------------------------
+
+# By default ntpd runs as a client. Add -l to run as a server on port 123.
+NTPD_OPTS="-N 
+{%- if not ((busybox_ntpd_server == '') or (busybox_ntpd_server == [])) %}
+{%- for server in busybox_ntpd_server %} -p {{server}}{% if not loop.last %} {% endif %}
+{%- endfor %}
+{%- endif %}"

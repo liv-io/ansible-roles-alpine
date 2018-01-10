@@ -1,0 +1,74 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - cronjob
+    - main
+    - busybox_ntpd
+
+#-------------------------------------------------------------------------------
+# SYSTEM
+#-------------------------------------------------------------------------------
+
+- name: 'service stop busybox-ntpd'
+  service:
+    state: 'stopped'
+    enabled: 'no'
+    name: "{{service_name_busybox_ntpd}}"
+  tags:
+    - system
+    - cronjob
+    - main
+    - busybox_ntpd
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'template create ntpd'
+  template:
+    src: "{{file_src_ntpd}}"
+    dest: "{{file_path_ntpd}}"
+    mode: "{{file_mode_ntpd}}"
+    owner: "{{file_owner_ntpd}}"
+    group: "{{file_group_ntpd}}"
+  tags:
+    - files
+    - cronjob
+    - main
+    - busybox_ntpd
+
+- name: 'template create busybox-ntpd_update-time.sh'
+  template:
+    src: "{{file_src_busybox_ntpd_update_time_sh}}"
+    dest: "{{file_path_busybox_ntpd_update_time_sh}}"
+    mode: "{{file_mode_busybox_ntpd_update_time_sh}}"
+    owner: "{{file_owner_busybox_ntpd_update_time_sh}}"
+    group: "{{file_group_busybox_ntpd_update_time_sh}}"
+  tags:
+    - files
+    - cronjob
+    - main
+    - busybox_ntpd
+
+- name: 'line config busybox-ntpd_update-time'
+  lineinfile:
+    state: 'present'
+    line: "{{file_line_busybox_ntpd_update_time}} # Ansible: busybox-ntpd_update-time"
+    regexp: "# Ansible: busybox-ntpd_update-time$"
+    dest: "{{file_path_busybox_ntpd_update_time}}"
+  tags:
+    - files
+    - cronjob
+    - main
+    - busybox_ntpd

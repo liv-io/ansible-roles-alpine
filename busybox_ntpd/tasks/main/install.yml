@@ -1,0 +1,48 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - install
+    - main
+    - busybox_ntpd
+
+#-------------------------------------------------------------------------------
+# PACKAGING
+#-------------------------------------------------------------------------------
+
+- name: 'package install busybox'
+  package:
+    state: 'present'
+    name: "{{package_name_busybox}}"
+  tags:
+    - packaging
+    - install
+    - main
+    - busybox_ntpd
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'file create busybox-ntpd_script.dir'
+  file:
+    state: 'directory'
+    path: "{{file_path_busybox_ntpd_script_dir}}"
+    mode: "{{file_mode_busybox_ntpd_script_dir}}"
+    owner: "{{file_owner_busybox_ntpd_script_dir}}"
+    group: "{{file_group_busybox_ntpd_script_dir}}"
+  tags:
+    - files
+    - install
+    - main
+    - busybox_ntpd
