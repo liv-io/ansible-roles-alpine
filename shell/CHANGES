@@ -13,6 +13,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.2.0 (2018-01-11)
+F: Add option 'shell_color_prompt' to control the shell prompt colors
+
 * Version 0.1.1 (2018-01-10)
 I: Improve Jinja2 filters
 
