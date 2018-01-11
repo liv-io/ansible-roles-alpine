@@ -1,0 +1,12 @@
+---
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+# inittab
+file_src_inittab: "templates/{{inittab_inittab_template}}/inittab.j2"
+file_path_inittab: '/etc/inittab'
+file_mode_inittab: '0644'
+file_owner_inittab: 'root'
+file_group_inittab: 'root'

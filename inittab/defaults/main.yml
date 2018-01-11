@@ -1,0 +1,7 @@
+---
+
+inittab_state: 'install'
+
+inittab_ctrlaltdel: 'false'
+
+inittab_inittab_template: 'main'
