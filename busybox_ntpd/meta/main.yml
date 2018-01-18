@@ -1,5 +1,5 @@
 ---
 
 dependencies:
-  - {role: 'common', when: (busybox_ntpd_state|match('cron|cronjob'))}
-  - {role: 'mailx', when: (busybox_ntpd_monitor_mail_state|match('true|yes|enable'))}
+  - {role: common, when: (busybox_ntpd_state|match('cron|cronjob'))}
+  - {role: mailx, when: (busybox_ntpd_monitor_mail_state|match('true|yes|enable'))}
