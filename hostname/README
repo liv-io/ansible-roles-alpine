@@ -23,19 +23,19 @@ USAGE
 --------------------------------------------------------------------------------
 
 INSTALL
-  - host: all
+  - hosts: all
     roles:
       - role: hostname
     vars:
-      host_state: 'install'
-      hostname_hostname: 'nameserver01'
+      hostname_state: 'install'
+      hostname_hostname: 't101.cyberdyne.com'
 
 INACTIVE
   - hosts: all
     roles:
       - role: hostname
     vars:
-      host_state: 'inactive'
+      hostname_state: 'inactive'
 
 --------------------------------------------------------------------------------
 VARIABLES
@@ -61,7 +61,7 @@ ROLE
     Type       : String
     Default    : "{{inventory_hostname}}"
     Options    :
-      Examples: 'proxy' | 'nameserver' | 'webserver'
+      Examples: 'proxy.domain.tld' | 'nameserver.domain.tld' | 'webserver.domain.tld'
 
   hostname_hostname_template
     Description: Define the template source for 'hostname.j2'.
