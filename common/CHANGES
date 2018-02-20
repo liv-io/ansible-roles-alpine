@@ -13,8 +13,11 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.2 (2018-02-20)
+B: Fix include condition
+
 * Version 0.1.1 (2018-02-16)
-F: Fix multiple variable names
+B: Fix multiple variable names
 
 * Version 0.1.0 (2018-01-07)
 F: Initial release
