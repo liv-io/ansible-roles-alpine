@@ -31,13 +31,6 @@ INSTALL
       motd_env_name: 'Testing'
       motd_host_description: 'Test Host'
 
-DISABLE
-  - hosts: all
-    roles:
-      - role: motd
-    vars:
-      motd_state: 'disable'
-
 INACTIVE
   - hosts: all
     roles:
@@ -60,7 +53,6 @@ ROLE
     Default    : 'install'
     Options    :
       Install : 'true' | 'yes' | 'install'
-      Disable : 'false' | 'no' | 'disable'
       Inactive: 'quiesce' | 'inactive'
 
   motd_env_name
