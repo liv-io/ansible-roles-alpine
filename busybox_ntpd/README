@@ -99,20 +99,6 @@ ROLE
     Options    :
       Examples: 5 | 11 | 15 | 20 | 23
 
-  busybox_ntpd_busybox_ntpd_update_time_sh_template
-    Description: Define the template source for 'busybox-ntpd_update-time.sh.j2'.
-                 Any value other than 'main' requires a Jinja2 file to be
-                 created. The custom Jinja2 file for an example configuration
-                 called 'example' needs to be placed as follows:
-                 'busybox_ntpd/templates/example/busybox-ntpd_update-time.sh.j2'
-    Implemented: 0.1
-    Required   : False
-    Value      : Arbitrary
-    Type       : String
-    Default    : 'main'
-    Options    :
-      Examples: 'example' | 'environment' | 'hostname'
-
   busybox_ntpd_monitor_mail_recipient
     Description: Define the 'busybox_ntpd_monitor_mail_recipient' option.
     Implemented: 0.1
@@ -144,20 +130,6 @@ ROLE
     Default    : "BusyBox NTPD: Update Time - Error ({{ansible_hostname}})"
     Options    :
       Examples: 'BusyBox NTPD: Update Time Error'
-
-  busybox_ntpd_ntpd_template
-    Description: Define the template source for 'ntpd.j2'.
-                 Any value other than 'main' requires a Jinja2
-                 file to be created. The custom Jinja2 file for an example
-                 configuration called 'example' needs to be placed as follows:
-                 'busybox_ntpd/templates/example/ntpd.j2'
-    Implemented: 0.1
-    Required   : False
-    Value      : Arbitrary
-    Type       : String
-    Default    : 'main'
-    Options    :
-      Examples: 'example' | 'environment' | 'hostname'
 
   busybox_ntpd_server
     Description: Define the 'busybox_ntpd_server' option.
