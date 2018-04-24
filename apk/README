@@ -175,20 +175,6 @@ ROLE
                   {state: 'true', protocol: 'http', mirror: 'dl-5.alpinelinux.org', version: 'edge', repository: 'community', comment: 'Edge Community Repository'}]
       None    : []
 
-  apk_repositories_template
-    Description: Define the template source for 'repositories.j2'.
-                 Any value other than 'main' requires a Jinja2
-                 file to be created. The custom Jinja2 file for an example
-                 configuration called 'example' needs to be placed as follows:
-                 'apk/templates/example/repositories.j2'
-    Implemented: 0.1
-    Required   : False
-    Value      : Arbitrary
-    Type       : String
-    Default    : 'main'
-    Options    :
-      Examples: 'example' | 'environment' | 'hostname'
-
 --------------------------------------------------------------------------------
 CONFLICTS
 --------------------------------------------------------------------------------

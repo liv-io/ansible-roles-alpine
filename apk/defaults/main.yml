@@ -15,5 +15,3 @@ apk_dependencies: []
 apk_group: []
 
 apk_host: []
-
-apk_repositories_template: 'main'
