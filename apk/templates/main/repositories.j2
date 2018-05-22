@@ -21,12 +21,12 @@
 {% if (all.comment is defined) and not (all.comment == '') %}
 # {{all.comment}}
 {% endif %}
-{%- if (all.state is defined) and (all.state|match('false|no|disable')) %}#{% endif %}
-{%- if (all.protocol is defined) and (all.protocol|match('none')) %}{% elif (all.protocol is defined) and not (all.protocol == '') %}{{all.protocol}}://{% else %}http://{% endif %}
-{%- if (all.mirror is defined) and (all.mirror|match('none')) %}{% elif (all.mirror is defined) and not (all.mirror == '') %}{{all.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
-{%- if (all.path is defined) and (all.path|match('none')) %}{% elif (all.path is defined) and not (all.path == '') %}{{all.path}}/{% else %}alpine/{% endif %}
-{%- if (all.version is defined) and (all.version|match('none')) %}{% elif (all.version is defined) and not (all.version == '') %}{{all.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
-{%- if (all.repository is defined) and (all.repository|match('none')) %}{% elif (all.repository is defined) and not (all.repository == '') %}{{all.repository}}{% else %}main{% endif %}
+{%- if (all.state is defined) and (all.state is match('false|no|disable')) %}#{% endif %}
+{%- if (all.protocol is defined) and (all.protocol is match('none')) %}{% elif (all.protocol is defined) and not (all.protocol == '') %}{{all.protocol}}://{% else %}http://{% endif %}
+{%- if (all.mirror is defined) and (all.mirror is match('none')) %}{% elif (all.mirror is defined) and not (all.mirror == '') %}{{all.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
+{%- if (all.path is defined) and (all.path is match('none')) %}{% elif (all.path is defined) and not (all.path == '') %}{{all.path}}/{% else %}alpine/{% endif %}
+{%- if (all.version is defined) and (all.version is match('none')) %}{% elif (all.version is defined) and not (all.version == '') %}{{all.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
+{%- if (all.repository is defined) and (all.repository is match('none')) %}{% elif (all.repository is defined) and not (all.repository == '') %}{{all.repository}}{% else %}main{% endif %}
 {% if not loop.last %}
 
 {% endif %}
@@ -41,12 +41,12 @@
 {% if (dependencies.comment is defined) and not (dependencies.comment == '') %}
 # {{dependencies.comment}}
 {% endif %}
-{%- if (dependencies.state is defined) and (dependencies.state|match('false|no|disable')) %}#{% endif %}
-{%- if (dependencies.protocol is defined) and (dependencies.protocol|match('none')) %}{% elif (dependencies.protocol is defined) and not (dependencies.protocol == '') %}{{dependencies.protocol}}://{% else %}http://{% endif %}
-{%- if (dependencies.mirror is defined) and (dependencies.mirror|match('none')) %}{% elif (dependencies.mirror is defined) and not (dependencies.mirror == '') %}{{dependencies.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
-{%- if (dependencies.path is defined) and (dependencies.path|match('none')) %}{% elif (dependencies.path is defined) and not (dependencies.path == '') %}{{dependencies.path}}/{% else %}alpine/{% endif %}
-{%- if (dependencies.version is defined) and (dependencies.version|match('none')) %}{% elif (dependencies.version is defined) and not (dependencies.version == '') %}{{dependencies.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
-{%- if (dependencies.repository is defined) and (dependencies.repository|match('none')) %}{% elif (dependencies.repository is defined) and not (dependencies.repository == '') %}{{dependencies.repository}}{% else %}main{% endif %}
+{%- if (dependencies.state is defined) and (dependencies.state is match('false|no|disable')) %}#{% endif %}
+{%- if (dependencies.protocol is defined) and (dependencies.protocol is match('none')) %}{% elif (dependencies.protocol is defined) and not (dependencies.protocol == '') %}{{dependencies.protocol}}://{% else %}http://{% endif %}
+{%- if (dependencies.mirror is defined) and (dependencies.mirror is match('none')) %}{% elif (dependencies.mirror is defined) and not (dependencies.mirror == '') %}{{dependencies.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
+{%- if (dependencies.path is defined) and (dependencies.path is match('none')) %}{% elif (dependencies.path is defined) and not (dependencies.path == '') %}{{dependencies.path}}/{% else %}alpine/{% endif %}
+{%- if (dependencies.version is defined) and (dependencies.version is match('none')) %}{% elif (dependencies.version is defined) and not (dependencies.version == '') %}{{dependencies.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
+{%- if (dependencies.repository is defined) and (dependencies.repository is match('none')) %}{% elif (dependencies.repository is defined) and not (dependencies.repository == '') %}{{dependencies.repository}}{% else %}main{% endif %}
 {% if not loop.last %}
 
 {% endif %}
@@ -61,12 +61,12 @@
 {% if (group.comment is defined) and not (group.comment == '') %}
 # {{group.comment}}
 {% endif %}
-{%- if (group.state is defined) and (group.state|match('false|no|disable')) %}#{% endif %}
-{%- if (group.protocol is defined) and (group.protocol|match('none')) %}{% elif (group.protocol is defined) and not (group.protocol == '') %}{{group.protocol}}://{% else %}http://{% endif %}
-{%- if (group.mirror is defined) and (group.mirror|match('none')) %}{% elif (group.mirror is defined) and not (group.mirror == '') %}{{group.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
-{%- if (group.path is defined) and (group.path|match('none')) %}{% elif (group.path is defined) and not (group.path == '') %}{{group.path}}/{% else %}alpine/{% endif %}
-{%- if (group.version is defined) and (group.version|match('none')) %}{% elif (group.version is defined) and not (group.version == '') %}{{group.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
-{%- if (group.repository is defined) and (group.repository|match('none')) %}{% elif (group.repository is defined) and not (group.repository == '') %}{{group.repository}}{% else %}main{% endif %}
+{%- if (group.state is defined) and (group.state is match('false|no|disable')) %}#{% endif %}
+{%- if (group.protocol is defined) and (group.protocol is match('none')) %}{% elif (group.protocol is defined) and not (group.protocol == '') %}{{group.protocol}}://{% else %}http://{% endif %}
+{%- if (group.mirror is defined) and (group.mirror is match('none')) %}{% elif (group.mirror is defined) and not (group.mirror == '') %}{{group.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
+{%- if (group.path is defined) and (group.path is match('none')) %}{% elif (group.path is defined) and not (group.path == '') %}{{group.path}}/{% else %}alpine/{% endif %}
+{%- if (group.version is defined) and (group.version is match('none')) %}{% elif (group.version is defined) and not (group.version == '') %}{{group.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
+{%- if (group.repository is defined) and (group.repository is match('none')) %}{% elif (group.repository is defined) and not (group.repository == '') %}{{group.repository}}{% else %}main{% endif %}
 {% if not loop.last %}
 
 {% endif %}
@@ -81,12 +81,12 @@
 {% if (host.comment is defined) and not (host.comment == '') %}
 # {{host.comment}}
 {% endif %}
-{%- if (host.state is defined) and (host.state|match('false|no|disable')) %}#{% endif %}
-{%- if (host.protocol is defined) and (host.protocol|match('none')) %}{% elif (host.protocol is defined) and not (host.protocol == '') %}{{host.protocol}}://{% else %}http://{% endif %}
-{%- if (host.mirror is defined) and (host.mirror|match('none')) %}{% elif (host.mirror is defined) and not (host.mirror == '') %}{{host.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
-{%- if (host.path is defined) and (host.path|match('none')) %}{% elif (host.path is defined) and not (host.path == '') %}{{host.path}}/{% else %}alpine/{% endif %}
-{%- if (host.version is defined) and (host.version|match('none')) %}{% elif (host.version is defined) and not (host.version == '') %}{{host.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
-{%- if (host.repository is defined) and (host.repository|match('none')) %}{% elif (host.repository is defined) and not (host.repository == '') %}{{host.repository}}{% else %}main{% endif %}
+{%- if (host.state is defined) and (host.state is match('false|no|disable')) %}#{% endif %}
+{%- if (host.protocol is defined) and (host.protocol is match('none')) %}{% elif (host.protocol is defined) and not (host.protocol == '') %}{{host.protocol}}://{% else %}http://{% endif %}
+{%- if (host.mirror is defined) and (host.mirror is match('none')) %}{% elif (host.mirror is defined) and not (host.mirror == '') %}{{host.mirror}}/{% else %}dl-5.alpinelinux.org/{% endif %}
+{%- if (host.path is defined) and (host.path is match('none')) %}{% elif (host.path is defined) and not (host.path == '') %}{{host.path}}/{% else %}alpine/{% endif %}
+{%- if (host.version is defined) and (host.version is match('none')) %}{% elif (host.version is defined) and not (host.version == '') %}{{host.version}}/{% else %}v{{ansible_distribution_version|truncate(3, True, '')}}/{% endif %}
+{%- if (host.repository is defined) and (host.repository is match('none')) %}{% elif (host.repository is defined) and not (host.repository == '') %}{{host.repository}}{% else %}main{% endif %}
 {% if not loop.last %}
 
 {% endif %}
