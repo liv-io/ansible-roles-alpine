@@ -35,7 +35,7 @@ echo=$($which echo) || { echo "Error: Command 'echo' not found."; exit 127; }
 expr=$($which expr) || { echo "Error: Command 'expr' not found."; exit 127; }
 hostname=$($which hostname) || { echo "Error: Command 'hostname' not found."; exit 127; }
 logger=$($which logger) || { echo "Error: Command 'logger' not found."; exit 127; }
-{% if (busybox_ntpd_monitor_mail_state|match('true|yes|enable')) %}
+{% if (busybox_ntpd_monitor_mail_state is match('true|yes|enable')) %}
 mail=$($which mail) || { echo "Error: Command 'mail' not found."; exit 127; }
 {% endif %}
 rm=$($which rm) || { echo "Error: Command 'rm' not found."; exit 127; }
@@ -60,7 +60,7 @@ message='Please check log files for more information.'
 
 busybox_ntpd_servers='{% if not ((busybox_ntpd_server == '') or (busybox_ntpd_server == [])) %}{% for server in busybox_ntpd_server %}{{server}}{% if not loop.last %} {% endif %}{% endfor %}{% endif %}'
 
-{% if (busybox_ntpd_monitor_mail_state|match('true|yes|enable')) %}
+{% if (busybox_ntpd_monitor_mail_state is match('true|yes|enable')) %}
 mail_recipient='{% for mail_recipient in busybox_ntpd_monitor_mail_recipient %}{{mail_recipient}}{% if not loop.last %},{% endif %}{% endfor %}'
 mail_subject='{{busybox_ntpd_monitor_mail_subject}}'
 {% endif %}
@@ -69,7 +69,7 @@ mail_subject='{{busybox_ntpd_monitor_mail_subject}}'
 # FUNCTIONS
 #-------------------------------------------------------------------------------
 
-{% if (busybox_ntpd_monitor_mail_state|match('true|yes|enable')) %}
+{% if (busybox_ntpd_monitor_mail_state is match('true|yes|enable')) %}
 mail_error() {
   retval=$1
   severity=$2
@@ -142,7 +142,7 @@ log_and_exit_on_error() {
     $rm -f $lockfile
     $echo "$($date '+%Y-%m-%dT%H:%M:%S%z') - $host - $script: "$severity: $message""
     $logger -t $script "$severity: $message"
-{% if (busybox_ntpd_monitor_mail_state|match('true|yes|enable')) %}
+{% if (busybox_ntpd_monitor_mail_state is match('true|yes|enable')) %}
     mail_error $retval "$severity" "$message"
 {% endif %}
     exit $retval
