@@ -31,7 +31,6 @@
     - 'command purge apk cache'
     - 'command update apk repository indexes'
   tags:
-    - files
     - install
     - main
     - apk

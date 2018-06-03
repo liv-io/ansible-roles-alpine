@@ -25,7 +25,6 @@
     state: 'present'
     name: "{{package_name_openntpd}}"
   tags:
-    - packaging
     - install
     - main
     - openntpd

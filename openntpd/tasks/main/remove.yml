@@ -25,7 +25,6 @@
     state: 'absent'
     name: "{{package_name_openntpd}}"
   tags:
-    - packaging
     - remove
     - main
     - openntpd
@@ -39,7 +38,6 @@
     state: 'absent'
     path: "{{file_path_ntpd_conf}}"
   tags:
-    - files
     - remove
     - main
     - openntpd

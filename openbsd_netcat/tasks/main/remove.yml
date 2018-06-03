@@ -25,7 +25,6 @@
     state: 'absent'
     name: "{{package_name_openbsd_netcat}}"
   tags:
-    - packaging
     - remove
     - main
     - openbsd_netcat

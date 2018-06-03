@@ -29,7 +29,6 @@
     group: "{{file_group_ntpd}}"
   notify: 'service restart busybox-ntpd'
   tags:
-    - files
     - enable
     - main
     - busybox_ntpd
@@ -41,7 +40,6 @@
     regexp: "# Ansible: busybox-ntpd_update-time$"
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
-    - files
     - enable
     - main
     - busybox_ntpd
@@ -51,7 +49,6 @@
     state: 'absent'
     path: "{{file_path_busybox_ntpd_update_time_sh}}"
   tags:
-    - files
     - enable
     - main
     - busybox_ntpd
@@ -66,7 +63,6 @@
     enabled: 'yes'
     name: "{{service_name_busybox_ntpd}}"
   tags:
-    - system
     - enable
     - main
     - busybox_ntpd

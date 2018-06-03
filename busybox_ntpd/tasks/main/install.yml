@@ -25,7 +25,6 @@
     state: 'present'
     name: "{{package_name_busybox}}"
   tags:
-    - packaging
     - install
     - main
     - busybox_ntpd
@@ -42,7 +41,6 @@
     owner: "{{file_owner_busybox_ntpd_script_dir}}"
     group: "{{file_group_busybox_ntpd_script_dir}}"
   tags:
-    - files
     - install
     - main
     - busybox_ntpd

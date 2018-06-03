@@ -29,7 +29,6 @@
     group: "{{file_group_hostname}}"
   notify: 'command set hostname'
   tags:
-    - files
     - install
     - main
     - hostname

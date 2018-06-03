@@ -28,7 +28,6 @@
     owner: "{{file_owner_ntpd}}"
     group: "{{file_group_ntpd}}"
   tags:
-    - files
     - disable
     - main
     - busybox_ntpd
@@ -41,7 +40,6 @@
     owner: "{{file_owner_busybox_ntpd_update_time_sh}}"
     group: "{{file_group_busybox_ntpd_update_time_sh}}"
   tags:
-    - files
     - disable
     - main
     - busybox_ntpd
@@ -53,7 +51,6 @@
     regexp: "# Ansible: busybox-ntpd_update-time$"
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
-    - files
     - disable
     - main
     - busybox_ntpd
@@ -68,7 +65,6 @@
     enabled: 'no'
     name: "{{service_name_busybox_ntpd}}"
   tags:
-    - system
     - disable
     - main
     - busybox_ntpd

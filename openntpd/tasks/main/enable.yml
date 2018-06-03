@@ -29,7 +29,6 @@
     group: "{{file_group_ntpd_conf}}"
   notify: 'service restart openntpd'
   tags:
-    - files
     - enable
     - main
     - openntpd
@@ -44,7 +43,6 @@
     enabled: 'yes'
     name: "{{service_name_openntpd}}"
   tags:
-    - system
     - enable
     - main
     - openntpd

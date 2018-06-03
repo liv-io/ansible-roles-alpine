@@ -27,7 +27,6 @@
     regexp: "# Ansible: busybox-ntpd_update-time$"
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
-    - files
     - remove
     - main
     - busybox_ntpd
@@ -37,7 +36,6 @@
     state: 'absent'
     path: "{{file_path_busybox_ntpd_update_time_sh}}"
   tags:
-    - files
     - remove
     - main
     - busybox_ntpd
@@ -47,7 +45,6 @@
     state: 'absent'
     path: "{{file_path_busybox_ntpd_script_dir}}"
   tags:
-    - files
     - remove
     - main
     - busybox_ntpd
@@ -57,7 +54,6 @@
     state: 'absent'
     path: "{{file_path_ntpd}}"
   tags:
-    - files
     - remove
     - main
     - busybox_ntpd

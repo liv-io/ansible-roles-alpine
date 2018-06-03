@@ -28,7 +28,6 @@
     owner: "{{file_owner_inittab}}"
     group: "{{file_group_inittab}}"
   tags:
-    - files
     - install
     - main
     - inittab
