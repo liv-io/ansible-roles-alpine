@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - install
-    - main
     - libressl
 
 #-------------------------------------------------------------------------------
@@ -26,5 +25,4 @@
     name: "{{package_name_libressl}}"
   tags:
     - install
-    - main
     - libressl

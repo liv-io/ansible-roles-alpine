@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - install
-    - main
     - openntpd
 
 #-------------------------------------------------------------------------------
@@ -26,5 +25,4 @@
     name: "{{package_name_openntpd}}"
   tags:
     - install
-    - main
     - openntpd

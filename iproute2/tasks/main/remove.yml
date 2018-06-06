@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - remove
-    - main
     - iproute2
 
 #-------------------------------------------------------------------------------
@@ -26,5 +25,4 @@
     name: "{{package_name_iproute2}}"
   tags:
     - remove
-    - main
     - iproute2

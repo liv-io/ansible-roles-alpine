@@ -4,12 +4,10 @@
   import_tasks: install.yml
   when: not (iproute2_state is match('false|no|remove|quiesce|inactive'))
   tags:
-    - main
     - iproute2
 
 - name: 'task include remove'
   import_tasks: remove.yml
   when: (iproute2_state is match('false|no|remove'))
   tags:
-    - main
     - iproute2

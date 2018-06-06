@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - remove
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -28,7 +27,6 @@
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
     - remove
-    - main
     - busybox_ntpd
 
 - name: 'file remove busybox-ntpd_update-time.sh'
@@ -37,7 +35,6 @@
     path: "{{file_path_busybox_ntpd_update_time_sh}}"
   tags:
     - remove
-    - main
     - busybox_ntpd
 
 - name: 'file remove ntdp-script.dir'
@@ -46,7 +43,6 @@
     path: "{{file_path_busybox_ntpd_script_dir}}"
   tags:
     - remove
-    - main
     - busybox_ntpd
 
 - name: 'file remove ntpd'
@@ -55,5 +51,4 @@
     path: "{{file_path_ntpd}}"
   tags:
     - remove
-    - main
     - busybox_ntpd

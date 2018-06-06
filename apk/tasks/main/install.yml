@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - install
-    - main
     - apk
 
 #-------------------------------------------------------------------------------
@@ -32,7 +31,6 @@
     - 'command update apk repository indexes'
   tags:
     - install
-    - main
     - apk
 
 #-------------------------------------------------------------------------------
@@ -44,5 +42,4 @@
   tags:
     - meta
     - install
-    - main
     - apk

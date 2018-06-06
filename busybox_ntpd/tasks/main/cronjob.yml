@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - cronjob
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -27,7 +26,6 @@
     name: "{{service_name_busybox_ntpd}}"
   tags:
     - cronjob
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -43,7 +41,6 @@
     group: "{{file_group_ntpd}}"
   tags:
     - cronjob
-    - main
     - busybox_ntpd
 
 - name: 'template create busybox-ntpd_update-time.sh'
@@ -55,7 +52,6 @@
     group: "{{file_group_busybox_ntpd_update_time_sh}}"
   tags:
     - cronjob
-    - main
     - busybox_ntpd
 
 - name: 'line config busybox-ntpd_update-time'
@@ -66,5 +62,4 @@
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
     - cronjob
-    - main
     - busybox_ntpd

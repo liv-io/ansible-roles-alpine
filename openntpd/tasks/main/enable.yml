@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - enable
-    - main
     - openntpd
 
 #-------------------------------------------------------------------------------
@@ -30,7 +29,6 @@
   notify: 'service restart openntpd'
   tags:
     - enable
-    - main
     - openntpd
 
 #-------------------------------------------------------------------------------
@@ -44,5 +42,4 @@
     name: "{{service_name_openntpd}}"
   tags:
     - enable
-    - main
     - openntpd

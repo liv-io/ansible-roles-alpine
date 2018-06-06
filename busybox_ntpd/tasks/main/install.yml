@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - install
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -26,7 +25,6 @@
     name: "{{package_name_busybox}}"
   tags:
     - install
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -42,5 +40,4 @@
     group: "{{file_group_busybox_ntpd_script_dir}}"
   tags:
     - install
-    - main
     - busybox_ntpd

@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - install
-    - main
     - hostname
 
 #-------------------------------------------------------------------------------
@@ -30,5 +29,4 @@
   notify: 'command set hostname'
   tags:
     - install
-    - main
     - hostname

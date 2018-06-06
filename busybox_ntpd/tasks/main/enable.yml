@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - enable
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -30,7 +29,6 @@
   notify: 'service restart busybox-ntpd'
   tags:
     - enable
-    - main
     - busybox_ntpd
 
 - name: 'line config busybox-ntpd_update-time'
@@ -41,7 +39,6 @@
     dest: "{{file_path_busybox_ntpd_update_time}}"
   tags:
     - enable
-    - main
     - busybox_ntpd
 
 - name: 'file remove busybox-ntpd_update-time.sh'
@@ -50,7 +47,6 @@
     path: "{{file_path_busybox_ntpd_update_time_sh}}"
   tags:
     - enable
-    - main
     - busybox_ntpd
 
 #-------------------------------------------------------------------------------
@@ -64,5 +60,4 @@
     name: "{{service_name_busybox_ntpd}}"
   tags:
     - enable
-    - main
     - busybox_ntpd

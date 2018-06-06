@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - remove
-    - main
     - openbsd_netcat
 
 #-------------------------------------------------------------------------------
@@ -26,5 +25,4 @@
     name: "{{package_name_openbsd_netcat}}"
   tags:
     - remove
-    - main
     - openbsd_netcat

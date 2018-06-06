@@ -13,7 +13,6 @@
       skip: 'true'
   tags:
     - disable
-    - main
     - openntpd
 
 #-------------------------------------------------------------------------------
@@ -29,7 +28,6 @@
     group: "{{file_group_ntpd_conf}}"
   tags:
     - disable
-    - main
     - openntpd
 
 #-------------------------------------------------------------------------------
@@ -43,5 +41,4 @@
     name: "{{service_name_openntpd}}"
   tags:
     - disable
-    - main
     - openntpd
