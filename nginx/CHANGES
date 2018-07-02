@@ -13,6 +13,10 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.3.0 (2018-07-03)
+F: Add support for Alpine Linux 3.8
+F: Drop support for Alpine Linux 3.6
+
 * Version 0.2.1 (2018-06-01)
 I: Remove needless notify from 'command generate dhparam' task
 
