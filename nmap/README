@@ -82,8 +82,8 @@ PACKAGES
   nmap
     Version: >= 5.51
     Name   :
-      Alpine Linux 3.6: 'nmap'
       Alpine Linux 3.7: 'nmap'
+      Alpine Linux 3.8: 'nmap'
 
 ROLES
 
@@ -125,9 +125,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
