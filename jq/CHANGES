@@ -13,5 +13,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.2.0 (2018-07-03)
+F: Add support for Alpine Linux 3.8
+F: Drop support for Alpine Linux 3.6
+
 * Version 0.1.0 (2018-06-06)
 F: Initial release

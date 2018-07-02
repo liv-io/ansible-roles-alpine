@@ -83,8 +83,8 @@ PACKAGES
   jq
     Version: >= 1.5
     Name   :
-      Alpine Linux 3.6: 'jq'
       Alpine Linux 3.7: 'jq'
+      Alpine Linux 3.8: 'jq'
 
 ROLES
 
@@ -126,9 +126,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
