@@ -124,8 +124,8 @@ PACKAGES
   openntpd
     Version: >= 20080406
     Name   :
-      Alpine Linux 3.6: 'openntpd'
       Alpine Linux 3.7: 'openntpd'
+      Alpine Linux 3.8: 'openntpd'
 
 ROLES
 
@@ -167,9 +167,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
