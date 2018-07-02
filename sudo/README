@@ -254,8 +254,8 @@ PACKAGES
   sudo
     Version: >= 1.8
     Name   :
-      Alpine Linux 3.6: 'sudo'
       Alpine Linux 3.7: 'sudo'
+      Alpine Linux 3.8: 'sudo'
 
 ROLES
 
@@ -297,9 +297,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
