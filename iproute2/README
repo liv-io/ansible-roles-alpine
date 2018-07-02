@@ -75,8 +75,8 @@ PACKAGES
   iproute2
     Version: >= 3.10
     Name   :
-      Alpine Linux 3.6: 'iproute2'
       Alpine Linux 3.7: 'iproute2'
+      Alpine Linux 3.8: 'iproute2'
 ROLES
 
 VARIABLES
@@ -117,9 +117,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
