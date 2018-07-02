@@ -15,7 +15,7 @@
 #
 #-------------------------------------------------------------------------------
 
-#	$OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
+#	$OpenBSD: sshd_config,v 1.102 2018/02/16 02:32:40 djm Exp $
 
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
@@ -170,12 +170,12 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #AuthorizedKeysCommandUser nobody
 
 # For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
-HostbasedAuthentication no
+#HostbasedAuthentication no
 # Change to yes if you don't trust ~/.ssh/known_hosts for
 # HostbasedAuthentication
 #IgnoreUserKnownHosts no
 # Don't read the user's ~/.rhosts and ~/.shosts files
-IgnoreRhosts yes
+#IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
 {% if (openssh_password_authentication is match('false|no|disable')) %}
@@ -183,10 +183,10 @@ PasswordAuthentication no
 {% else %}
 PasswordAuthentication yes
 {% endif %}
-PermitEmptyPasswords no
+#PermitEmptyPasswords no
 
 # Change to no to disable s/key passwords
-ChallengeResponseAuthentication no
+#ChallengeResponseAuthentication yes
 
 # Kerberos options
 #KerberosAuthentication no
@@ -285,16 +285,6 @@ Banner {{file_path_banner}}
 
 # override default of no subsystems
 Subsystem	sftp	/usr/lib/ssh/sftp-server
-
-# the following are HPN related configuration options
-# tcp receive buffer polling. disable in non autotuning kernels
-#TcpRcvBufPoll yes
- 
-# disable hpn performance boosts
-#HPNDisabled no
-
-# buffer size for hpn to non-hpn connections
-#HPNBufferSize 2048
 
 #-------------------------------------------------------------------------------
 # CONDITIONAL

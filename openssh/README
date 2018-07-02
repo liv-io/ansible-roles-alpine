@@ -397,8 +397,8 @@ ROLES
   openssh
     Version: >= 7.0
     Name   :
-      Alpine Linux 3.6: 'openssh'
       Alpine Linux 3.7: 'openssh'
+      Alpine Linux 3.8: 'openssh'
 
 VARIABLES
 
@@ -438,9 +438,9 @@ SUPPORT
 
 OPERATING SYSTEMS
   Alpine Linux
-    Version: 3.6-*
-      Status: Testing
     Version: 3.7-*
+      Status: Testing
+    Version: 3.8-*
       Status: Testing
 
 --------------------------------------------------------------------------------
