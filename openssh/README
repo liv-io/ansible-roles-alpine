@@ -284,17 +284,6 @@ ROLE
       Enable : 'true' | 'yes' | 'enable'
       Disable: 'false' | 'no' | 'disable'
 
-  openssh_print_last_log
-    Description: Control the 'openssh_print_last_log' option.
-    Implemented: 0.1
-    Required   : False
-    Value      : Predetermined
-    Type       : String
-    Default    : 'yes'
-    Options    :
-      Enable : 'true' | 'yes' | 'enable'
-      Disable: 'false' | 'no' | 'disable'
-
   openssh_pubkey_authentication
     Description: Control the 'openssh_pubkey_authentication' option.
     Implemented: 0.1

@@ -38,8 +38,6 @@ openssh_port: ['22']
 
 openssh_print_motd: 'yes'
 
-openssh_print_last_log: 'yes'
-
 openssh_pubkey_authentication: 'yes'
 
 openssh_rsa_authentication: 'yes'
