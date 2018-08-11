@@ -22,7 +22,7 @@
 - name: 'template create repositories'
   template:
     src: "{{file_src_repositories}}"
-    dest: "{{file_path_repositories}}"
+    dest: "{{file_dst_repositories}}"
     mode: "{{file_mode_repositories}}"
     owner: "{{file_owner_repositories}}"
     group: "{{file_group_repositories}}"

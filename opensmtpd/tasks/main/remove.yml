@@ -34,7 +34,7 @@
 - name: 'file remove aliases'
   file:
     state: 'absent'
-    path: "{{file_path_aliases}}"
+    path: "{{file_dst_aliases}}"
   tags:
     - remove
     - opensmtpd
@@ -42,7 +42,7 @@
 - name: 'file remove smtpd.conf'
   file:
     state: 'absent'
-    path: "{{file_path_smtpd_conf}}"
+    path: "{{file_dst_smtpd_conf}}"
   tags:
     - remove
     - opensmtpd

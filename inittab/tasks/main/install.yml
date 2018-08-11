@@ -22,7 +22,7 @@
 - name: 'template create inittab'
   template:
     src: "{{file_src_inittab}}"
-    dest: "{{file_path_inittab}}"
+    dest: "{{file_dst_inittab}}"
     mode: "{{file_mode_inittab}}"
     owner: "{{file_owner_inittab}}"
     group: "{{file_group_inittab}}"

@@ -22,7 +22,7 @@
 - name: 'template create hostname'
   template:
     src: "{{file_src_hostname}}"
-    dest: "{{file_path_hostname}}"
+    dest: "{{file_dst_hostname}}"
     mode: "{{file_mode_hostname}}"
     owner: "{{file_owner_hostname}}"
     group: "{{file_group_hostname}}"

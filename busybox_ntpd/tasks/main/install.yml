@@ -34,7 +34,7 @@
 - name: 'file create busybox-ntpd_script.dir'
   file:
     state: 'directory'
-    path: "{{file_path_busybox_ntpd_script_dir}}"
+    path: "{{file_dst_busybox_ntpd_script_dir}}"
     mode: "{{file_mode_busybox_ntpd_script_dir}}"
     owner: "{{file_owner_busybox_ntpd_script_dir}}"
     group: "{{file_group_busybox_ntpd_script_dir}}"

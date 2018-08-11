@@ -35,7 +35,7 @@
 - name: 'template create ntpd'
   template:
     src: "{{file_src_ntpd}}"
-    dest: "{{file_path_ntpd}}"
+    dest: "{{file_dst_ntpd}}"
     mode: "{{file_mode_ntpd}}"
     owner: "{{file_owner_ntpd}}"
     group: "{{file_group_ntpd}}"
@@ -46,7 +46,7 @@
 - name: 'template create busybox-ntpd_update-time.sh'
   template:
     src: "{{file_src_busybox_ntpd_update_time_sh}}"
-    dest: "{{file_path_busybox_ntpd_update_time_sh}}"
+    dest: "{{file_dst_busybox_ntpd_update_time_sh}}"
     mode: "{{file_mode_busybox_ntpd_update_time_sh}}"
     owner: "{{file_owner_busybox_ntpd_update_time_sh}}"
     group: "{{file_group_busybox_ntpd_update_time_sh}}"
@@ -59,7 +59,7 @@
     state: 'present'
     line: "{{file_line_busybox_ntpd_update_time}} # Ansible: busybox-ntpd_update-time"
     regexp: "# Ansible: busybox-ntpd_update-time$"
-    dest: "{{file_path_busybox_ntpd_update_time}}"
+    dest: "{{file_dst_busybox_ntpd_update_time}}"
   tags:
     - cronjob
     - busybox_ntpd

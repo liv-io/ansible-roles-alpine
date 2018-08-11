@@ -6,7 +6,7 @@
 
 # repositories
 file_src_repositories: "templates/main/repositories.j2"
-file_path_repositories: '/etc/apk/repositories'
+file_dst_repositories: '/etc/apk/repositories'
 file_mode_repositories: '0644'
 file_owner_repositories: 'root'
 file_group_repositories: 'root'

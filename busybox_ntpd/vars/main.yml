@@ -16,27 +16,27 @@ package_name_busybox: 'busybox'
 
 # ntpd
 file_src_ntpd: "templates/main/ntpd.j2"
-file_path_ntpd: '/etc/conf.d/ntpd'
+file_dst_ntpd: '/etc/conf.d/ntpd'
 file_mode_ntpd: '0644'
 file_owner_ntpd: 'root'
 file_group_ntpd: 'root'
 
 # busybox-ntpd_script.dir
-file_path_busybox_ntpd_script_dir: "/{{common_script_dir}}/busybox-ntpd"
+file_dst_busybox_ntpd_script_dir: "/{{common_script_dir}}/busybox-ntpd"
 file_mode_busybox_ntpd_script_dir: '0755'
 file_owner_busybox_ntpd_script_dir: 'root'
 file_group_busybox_ntpd_script_dir: 'root'
 
 # busybox-ntpd_update-time.sh
 file_src_busybox_ntpd_update_time_sh: "templates/main/busybox-ntpd_update-time.sh.j2"
-file_path_busybox_ntpd_update_time_sh: "{{file_path_busybox_ntpd_script_dir}}/busybox-ntpd_update-time.sh"
+file_dst_busybox_ntpd_update_time_sh: "{{file_dst_busybox_ntpd_script_dir}}/busybox-ntpd_update-time.sh"
 file_mode_busybox_ntpd_update_time_sh: '0754'
 file_owner_busybox_ntpd_update_time_sh: 'root'
 file_group_busybox_ntpd_update_time_sh: 'root'
 
 # busybox-ntpd_update-time
-file_line_busybox_ntpd_update_time: "*/{% if ((busybox_ntpd_busybox_ntpd_update_time_interval|int(10)) > 59) %}59{% elif ((busybox_ntpd_busybox_ntpd_update_time_interval|int(10)) < 1) %}1{% else %}{{(busybox_ntpd_busybox_ntpd_update_time_interval|int(10))}}{% endif %} * * * * {{file_path_busybox_ntpd_update_time_sh}}"
-file_path_busybox_ntpd_update_time: '/etc/crontabs/root'
+file_line_busybox_ntpd_update_time: "*/{% if ((busybox_ntpd_busybox_ntpd_update_time_interval|int(10)) > 59) %}59{% elif ((busybox_ntpd_busybox_ntpd_update_time_interval|int(10)) < 1) %}1{% else %}{{(busybox_ntpd_busybox_ntpd_update_time_interval|int(10))}}{% endif %} * * * * {{file_dst_busybox_ntpd_update_time_sh}}"
+file_dst_busybox_ntpd_update_time: '/etc/crontabs/root'
 
 #-------------------------------------------------------------------------------
 # SYSTEM
