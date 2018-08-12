@@ -32,7 +32,7 @@
 # FILES
 #-------------------------------------------------------------------------------
 
-- name: 'template create ntpd'
+- name: 'file create ntpd'
   template:
     src: "{{file_src_ntpd}}"
     dest: "{{file_dst_ntpd}}"
@@ -43,7 +43,7 @@
     - cronjob
     - busybox_ntpd
 
-- name: 'template create busybox-ntpd_update-time.sh'
+- name: 'file create busybox-ntpd_update-time.sh'
   template:
     src: "{{file_src_busybox_ntpd_update_time_sh}}"
     dest: "{{file_dst_busybox_ntpd_update_time_sh}}"

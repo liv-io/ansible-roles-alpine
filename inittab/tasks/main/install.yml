@@ -19,7 +19,7 @@
 # FILES
 #-------------------------------------------------------------------------------
 
-- name: 'template create inittab'
+- name: 'file create inittab'
   template:
     src: "{{file_src_inittab}}"
     dest: "{{file_dst_inittab}}"

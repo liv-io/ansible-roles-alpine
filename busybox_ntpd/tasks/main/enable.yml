@@ -19,7 +19,7 @@
 # FILES
 #-------------------------------------------------------------------------------
 
-- name: 'template create ntpd'
+- name: 'file create ntpd'
   template:
     src: "{{file_src_ntpd}}"
     dest: "{{file_dst_ntpd}}"

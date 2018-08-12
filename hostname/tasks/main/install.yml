@@ -19,7 +19,7 @@
 # FILES
 #-------------------------------------------------------------------------------
 
-- name: 'template create hostname'
+- name: 'file create hostname'
   template:
     src: "{{file_src_hostname}}"
     dest: "{{file_dst_hostname}}"
