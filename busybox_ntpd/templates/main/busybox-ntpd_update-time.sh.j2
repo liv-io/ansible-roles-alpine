@@ -171,7 +171,7 @@ check_script_user
 
 create_lockfile
 
-# Update the system time by polling NTP servers to determine the correct time
+# Update the system time by polling NTP servers
 for busybox_ntpd_server in ${busybox_ntpd_servers} ; do
   ${busybox_ntpd} ${busybox_ntpd_server} > /dev/null 2>&1
   if [ $? -eq 0 ]; then
