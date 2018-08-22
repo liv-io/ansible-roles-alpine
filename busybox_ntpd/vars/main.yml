@@ -15,7 +15,7 @@ package_name_busybox: 'busybox'
 #-------------------------------------------------------------------------------
 
 # ntpd
-file_src_ntpd: "templates/main/ntpd.j2"
+file_src_ntpd: 'templates/main/ntpd.j2'
 file_dst_ntpd: '/etc/conf.d/ntpd'
 file_mode_ntpd: '0644'
 file_owner_ntpd: 'root'
@@ -28,7 +28,7 @@ file_owner_busybox_ntpd_script_dir: 'root'
 file_group_busybox_ntpd_script_dir: 'root'
 
 # busybox-ntpd_update-time.sh
-file_src_busybox_ntpd_update_time_sh: "templates/main/busybox-ntpd_update-time.sh.j2"
+file_src_busybox_ntpd_update_time_sh: 'templates/main/busybox-ntpd_update-time.sh.j2'
 file_dst_busybox_ntpd_update_time_sh: "{{file_dst_busybox_ntpd_script_dir}}/busybox-ntpd_update-time.sh"
 file_mode_busybox_ntpd_update_time_sh: '0754'
 file_owner_busybox_ntpd_update_time_sh: 'root'

@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------
 
 # hostname
-file_src_hostname: "templates/main/hostname.j2"
+file_src_hostname: 'templates/main/hostname.j2'
 file_dst_hostname: '/etc/hostname'
 file_mode_hostname: '0644'
 file_owner_hostname: 'root'
