@@ -40,6 +40,5 @@
 - name: 'meta flush handlers'
   meta: 'flush_handlers'
   tags:
-    - meta
     - install
     - apk
