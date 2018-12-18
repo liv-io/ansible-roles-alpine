@@ -8,7 +8,8 @@ to allow easy grepping by scripts.
 
 The fields are:
 B: bug
-I: improvement
+C: change
+E: enhancement
 F: feature
 
 --------------------------------------------------------------------------------
@@ -22,7 +23,7 @@ F: Port role to Ansible 2.5
 
 * Version 0.3.0 (2018-05-18)
 F: Add parameter 'motd_host_ip_address'
-I: Improve 'motd_host_description' parameter
+E: Improve 'motd_host_description' parameter
 
 * Version 0.2.0 (2018-03-30)
 F: Port role to Ansible 2.4
@@ -31,7 +32,7 @@ F: Port role to Ansible 2.4
 B: Correct term in state filter
 
 * Version 0.1.1 (2018-01-10)
-I: Improve Jinja2 filters
+E: Improve Jinja2 filters
 
 * Version 0.1.0 (2017-12-27)
 F: Initial release

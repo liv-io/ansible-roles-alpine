@@ -8,7 +8,8 @@ to allow easy grepping by scripts.
 
 The fields are:
 B: bug
-I: improvement
+C: change
+E: enhancement
 F: feature
 
 --------------------------------------------------------------------------------
@@ -18,16 +19,16 @@ F: Add support for Alpine Linux 3.8
 F: Drop support for Alpine Linux 3.6
 
 * Version 0.2.1 (2018-06-01)
-I: Remove needless notify from 'command generate dhparam' task
+E: Remove needless notify from 'command generate dhparam' task
 
 * Version 0.2.0 (2018-05-22)
 F: Port role to Ansible 2.5
 
 * Version 0.1.3 (2018-04-24)
-I: Simplify role by removing 'template' option
+E: Simplify role by removing 'template' option
 
 * Version 0.1.2 (2018-04-16)
-I: Remove needless else statement in Jinja2 template
+E: Remove needless else statement in Jinja2 template
 
 * Version 0.1.1 (2018-04-15)
 B: Add missing package remove task
